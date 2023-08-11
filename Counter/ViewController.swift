@@ -10,19 +10,18 @@ import UIKit
 class ViewController: UIViewController {
     
     var counter = 0
-    
-    @IBOutlet weak var jump_times: UITextView!
-    @IBOutlet weak var exhausted_rabbit: UITextView!
-    @IBOutlet weak var plus_one_button: UIButton!
-    @IBOutlet weak var minus_one_button: UIButton!
+    @IBOutlet weak var exhaustedRabbit: UILabel!
+    @IBOutlet weak var jumpTimes: UILabel!
+    @IBOutlet weak var plusOneButton: UIButton!
+    @IBOutlet weak var minusOneButton: UIButton!
     @IBOutlet weak var rabbit: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        jump_times.text = "\(counter) times"
-        exhausted_rabbit.textColor = .black
-        exhausted_rabbit.layer.opacity = 0
+        jumpTimes.text = "\(counter) times"
+        exhaustedRabbit.textColor = .black
+        exhaustedRabbit.layer.opacity = 0
         disableMunisOneButton()
         rabbit.isHidden = true
     }
@@ -31,18 +30,18 @@ class ViewController: UIViewController {
     @IBAction func plusOne(_ sender: Any) {
         switch(counter){
         case 5:
-            exhausted_rabbit.layer.opacity = 100
+            exhaustedRabbit.layer.opacity = 100
             counter += 1
-            jump_times.text = "\(counter) times"
+            jumpTimes.text = "\(counter) times"
             disablePlusOneButton()
         case 0:
             counter += 1
-            jump_times.text = "\(counter) times"
+            jumpTimes.text = "\(counter) times"
             enableMunisOneButon()
             jump()
         default :
             counter += 1
-            jump_times.text = "\(counter) times"
+            jumpTimes.text = "\(counter) times"
             jump()
         }
     }
@@ -51,19 +50,19 @@ class ViewController: UIViewController {
         switch(counter){
         case 1 :
             counter -= 1
-            jump_times.text = "\(counter) times"
+            jumpTimes.text = "\(counter) times"
             disableMunisOneButton()
         
         case 6 :
             counter -= 1
-            jump_times.text = "\(counter) times"
+            jumpTimes.text = "\(counter) times"
             enablePlusOneButton()
-            exhausted_rabbit.layer.opacity = 0
+            exhaustedRabbit.layer.opacity = 0
             jump()
         
         default:
             counter -= 1
-            jump_times.text = "\(counter) times"
+            jumpTimes.text = "\(counter) times"
             jump()
         }
         
@@ -89,23 +88,23 @@ class ViewController: UIViewController {
     }
     
     func enablePlusOneButton (){
-        plus_one_button.isEnabled = true
-        plus_one_button.currentImage?.withTintColor(.black)
+        plusOneButton.isEnabled = true
+        plusOneButton.currentImage?.withTintColor(.black)
     }
     
     func disablePlusOneButton(){
-        plus_one_button.isEnabled = false
-        plus_one_button.currentImage?.withTintColor(.gray)
+        plusOneButton.isEnabled = false
+        plusOneButton.currentImage?.withTintColor(.gray)
     }
     
     func enableMunisOneButon (){
-        minus_one_button.isEnabled = true
-        minus_one_button.currentImage?.withTintColor(.black)
+        minusOneButton.isEnabled = true
+        minusOneButton.currentImage?.withTintColor(.black)
     }
     
     func disableMunisOneButton (){
-        minus_one_button.isEnabled = false
-        minus_one_button.currentImage?.withTintColor(.gray)
+        minusOneButton.isEnabled = false
+        minusOneButton.currentImage?.withTintColor(.gray)
     }
 
 }
