@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var counter = 0
+    
     @IBOutlet weak var exhaustedRabbit: UILabel!
     @IBOutlet weak var jumpTimes: UILabel!
     @IBOutlet weak var plusOneButton: UIButton!
@@ -80,9 +81,9 @@ class ViewController: UIViewController {
                 self.rabbit.frame.origin.y -= height/2
             })
         }){ (finished) in
+            self.rabbit.isHidden = true
             self.enableMunisOneButon()
             self.enablePlusOneButton()
-            self.rabbit.isHidden = true
         }
             
     }
