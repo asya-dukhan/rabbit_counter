@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -15,11 +15,30 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyL-WX-ZYG" userLabel="exhausted rabbit">
+                                <rect key="frame" x="24" y="490.66666666666674" width="382" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="TEU-va-EC0"/>
+                                </constraints>
+                                <string key="text">The rabbit is too exhausted to jump more than 5 times. He needs some sleep, a carrot and maybe watching Netflix for a while. But try to pick less jumps and probably he will agree.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 times" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fc-AN-Pnx" userLabel="jump times">
+                                <rect key="frame" x="24" y="387.66666666666669" width="382" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="hbm-r2-5hq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.32156863810000003" green="0.64313727620000005" blue="0.34901961679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make the rabbit jump" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELv-zr-q4W" userLabel="title">
-                                <rect key="frame" x="32" y="220.66666666666663" width="329" height="115"/>
+                                <rect key="frame" x="32" y="260.66666666666669" width="366" height="115"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="114.99999999999997" id="h96-jg-Bmh"/>
@@ -29,42 +48,21 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nX-Wm-R72" userLabel="exhausted_rabbit">
-                                <rect key="frame" x="24" y="438.66666666666669" width="345" height="128.00000000000006"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128.00000000000006" id="cBF-B3-wbZ"/>
-                                </constraints>
-                                <string key="text">The rabbit is too exhausted to jump more than 5 times. He needs some sleep, a carrot and maybe watching Netflix for a while. But try to pick less jumps and probably he will agree.</string>
-                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rabbit" translatesAutoresizingMaskIntoConstraints="NO" id="Mle-xn-HU8">
-                                <rect key="frame" x="146.66666666666666" y="438" width="100" height="200"/>
+                                <rect key="frame" x="165" y="478" width="100" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="2rU-Ov-XR1"/>
                                     <constraint firstAttribute="height" constant="200" id="rfI-SR-xaN"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" editable="NO" text="0 times" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z62-q1-qHP" userLabel="jump_times">
-                                <rect key="frame" x="24" y="347.66666666666669" width="345" height="48"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="i7s-Oj-c0V"/>
-                                </constraints>
-                                <color key="textColor" red="0.32156863810000003" green="0.64313727620000005" blue="0.34901961679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bushes" translatesAutoresizingMaskIntoConstraints="NO" id="AwI-nz-zK4">
-                                <rect key="frame" x="0.0" y="674" width="393" height="210"/>
+                                <rect key="frame" x="0.0" y="754" width="430" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="oiQ-af-1ID"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7h-dK-CML" userLabel="plus_one">
-                                <rect key="frame" x="193" y="407.66666666666669" width="55" height="38"/>
+                                <rect key="frame" x="211.66666666666666" y="447.66666666666669" width="54.999999999999972" height="38"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="">
@@ -76,7 +74,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWQ-uD-Bjq" userLabel="minus_one">
-                                <rect key="frame" x="145" y="407.66666666666669" width="55" height="38"/>
+                                <rect key="frame" x="163.66666666666666" y="447.66666666666669" width="55" height="38"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="">
@@ -92,30 +90,30 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ELv-zr-q4W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="0q7-2o-zy0"/>
-                            <constraint firstItem="ELv-zr-q4W" firstAttribute="bottom" secondItem="z62-q1-qHP" secondAttribute="top" constant="-12" id="1fv-TS-okc"/>
+                            <constraint firstItem="ELv-zr-q4W" firstAttribute="bottom" secondItem="2fc-AN-Pnx" secondAttribute="top" constant="-12" id="1fv-TS-okc"/>
                             <constraint firstItem="AwI-nz-zK4" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" constant="32" id="5I0-jM-6S9"/>
-                            <constraint firstItem="5nX-Wm-R72" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-24" id="5TY-Xy-koU"/>
+                            <constraint firstItem="YyL-WX-ZYG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-24" id="5TY-Xy-koU"/>
                             <constraint firstItem="JWQ-uD-Bjq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-24" id="7Eu-Ta-wEb"/>
-                            <constraint firstItem="z62-q1-qHP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-24" id="98v-i5-2bW"/>
-                            <constraint firstItem="z62-q1-qHP" firstAttribute="bottom" secondItem="I7h-dK-CML" secondAttribute="top" constant="-12" id="FqM-fJ-aaA"/>
+                            <constraint firstItem="2fc-AN-Pnx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-24" id="98v-i5-2bW"/>
+                            <constraint firstItem="2fc-AN-Pnx" firstAttribute="bottom" secondItem="I7h-dK-CML" secondAttribute="top" constant="-12" id="FqM-fJ-aaA"/>
                             <constraint firstItem="JWQ-uD-Bjq" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-12" id="Tgo-jj-TPM"/>
-                            <constraint firstItem="5nX-Wm-R72" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Txz-hQ-0Yy"/>
+                            <constraint firstItem="YyL-WX-ZYG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Txz-hQ-0Yy"/>
                             <constraint firstItem="AwI-nz-zK4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="bMt-xJ-X4a"/>
                             <constraint firstItem="AwI-nz-zK4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e88-7w-bDp"/>
                             <constraint firstItem="ELv-zr-q4W" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-32" id="em3-BD-4zW"/>
-                            <constraint firstItem="5nX-Wm-R72" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="iHF-6E-XH4"/>
+                            <constraint firstItem="YyL-WX-ZYG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="12" id="iHF-6E-XH4"/>
                             <constraint firstItem="Mle-xn-HU8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="12" id="lHZ-1q-8kU"/>
                             <constraint firstItem="Mle-xn-HU8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="owk-Ls-F1D"/>
                             <constraint firstItem="I7h-dK-CML" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-12" id="pnp-pS-6pe"/>
                             <constraint firstItem="I7h-dK-CML" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="24" id="sao-du-4qf"/>
-                            <constraint firstItem="z62-q1-qHP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="wIb-f2-Cr7"/>
+                            <constraint firstItem="2fc-AN-Pnx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="wIb-f2-Cr7"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="exhausted_rabbit" destination="5nX-Wm-R72" id="wyV-Nv-2pn"/>
-                        <outlet property="jump_times" destination="z62-q1-qHP" id="8qy-GN-Gjx"/>
-                        <outlet property="minus_one_button" destination="JWQ-uD-Bjq" id="Bux-dR-VJH"/>
-                        <outlet property="plus_one_button" destination="I7h-dK-CML" id="P0Q-ji-wFi"/>
+                        <outlet property="exhaustedRabbit" destination="YyL-WX-ZYG" id="UTC-8z-sb6"/>
+                        <outlet property="jumpTimes" destination="2fc-AN-Pnx" id="T8o-lX-GjF"/>
+                        <outlet property="minusOneButton" destination="JWQ-uD-Bjq" id="Bux-dR-VJH"/>
+                        <outlet property="plusOneButton" destination="I7h-dK-CML" id="P0Q-ji-wFi"/>
                         <outlet property="rabbit" destination="Mle-xn-HU8" id="byd-w7-t7M"/>
                     </connections>
                 </viewController>
